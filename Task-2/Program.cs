@@ -1,11 +1,11 @@
 ﻿using System;
 using Task_2.TextModel;
-using Task_2.Parser;
 using System.Configuration;
 using System.IO;
-using Task_2.Functionality;
+using Task_2.Interfaces;
 using System.Text.RegularExpressions;
 using System.Linq;
+using Task_2.Services;
 
 namespace Task_2
 {

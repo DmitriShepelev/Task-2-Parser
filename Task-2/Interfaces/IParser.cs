@@ -1,7 +1,6 @@
 ﻿using System.IO;
-using Task_2.TextModel;
 
-namespace Task_2.Parser
+namespace Task_2.Interfaces
 {
     public interface IParser
     {

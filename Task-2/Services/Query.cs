@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using Task_2.TextModel;
+using Task_2.Interfaces;
 
-namespace Task_2.Functionality
+namespace Task_2.Services
 {
     class Query : IQuery
     {
@@ -16,7 +15,7 @@ namespace Task_2.Functionality
             var result = text.OfType<Sentence>().OrderBy(x => x.CountOfWords);
             foreach (var item in result)
             {
-                Console.WriteLine(Regex.Replace(item.ToString(), "\\s+", " "));
+                Console.WriteLine(Regex.Replace(item.ToString().Trim(), "\\s+", " "));
             }
         }
 

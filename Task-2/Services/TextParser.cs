@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using Task_2.TextModel;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
-using System.Threading;
+using Task_2.Interfaces;
+using Task_2.ParserModel;
 
-namespace Task_2.Parser
+namespace Task_2.Services
 {
     public class TextParser : IParser
     {

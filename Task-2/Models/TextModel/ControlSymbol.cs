@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Task_2.Interfaces;
 
 namespace Task_2.TextModel
 {
-    public struct LetterOrDigit : ITextUnit
+    public struct ControlSymbol : ITextUnit
     {
         private readonly char _value;
-
-        public LetterOrDigit(char value)
+        public ControlSymbol(char value)
         {
             _value = value;
         }
+
         public override string ToString()
         {
             return _value.ToString();

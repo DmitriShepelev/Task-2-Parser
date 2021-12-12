@@ -1,4 +1,4 @@
-﻿namespace Task_2.Parser
+﻿namespace Task_2.ParserModel
 {
     enum State
     {

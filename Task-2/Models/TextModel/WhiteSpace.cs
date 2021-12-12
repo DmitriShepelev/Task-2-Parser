@@ -1,31 +1,25 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Task_2.Interfaces;
 
 namespace Task_2.TextModel
 {
-    public struct TrailingPunctuationMark : ITextUnit
+    public struct WhiteSpace : ITextUnit
     {
         private readonly char _value;
-        private readonly bool isInterrogativePuntuationMark;
-        public TrailingPunctuationMark(char value)
+
+        public WhiteSpace(char value)
         {
             _value = value;
-            isInterrogativePuntuationMark = value == '?';
         }
-
-        public bool IsInterrogativePuntuationMark { get => isInterrogativePuntuationMark; }
-
         public override string ToString()
         {
             return _value.ToString();
         }
+
         public IEnumerator<ITextUnit> GetEnumerator()
         {
-                yield return this;
+            yield return this;
         }
 
         private IEnumerator GetEnumerator1()
